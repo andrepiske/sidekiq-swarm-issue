@@ -22,3 +22,12 @@ To run this, the following env vars are mandatory:
 
 To run this, the `REDIS_URL` env var must be set. Default value of localhost
 will be picked up from `config/config.yml` otherwise.
+
+To open a console in Heroku:
+
+```
+heroku run /bin/bash -a <the-app-name>
+# Then:
+irb -r ./config/boot.rb
+```
+
