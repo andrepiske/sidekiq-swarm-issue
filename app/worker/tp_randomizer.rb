@@ -8,7 +8,7 @@ class Worker::TpRandomizer
     num = rand((1..10000)) + 100000
     puts "New number: #{num}"
 
-    wait_time = Integer(ENV.fetch('TP_WAIT_FOR', '5'))
+    wait_time = Integer(ENV.fetch('TP_WAIT_FOR', '20'))
     puts "Waiting #{wait_time} before setting number"
     tp_wait_for(wait_time)
     puts "Done waiting!"
