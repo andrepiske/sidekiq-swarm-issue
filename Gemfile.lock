@@ -1,0 +1,92 @@
+GEM
+  remote: https://enterprise.contribsys.com/
+  specs:
+    sidekiq-ent (7.1.1)
+      einhorn (~> 1.0)
+      sidekiq (>= 7.1.0, < 8)
+      sidekiq-pro (>= 7.1.0, < 8)
+    sidekiq-pro (7.1.3)
+      sidekiq (>= 7.1.0, < 8)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    byebug (11.1.3)
+    coderay (1.1.3)
+    comff (0.1.0)
+    concurrent-ruby (1.2.2)
+    connection_pool (2.4.1)
+    einhorn (1.0.0)
+    grande (0.0.2)
+    method_source (1.0.0)
+    multi_json (1.15.0)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    nio4r (2.5.9)
+    oj (3.15.0)
+    pry (0.14.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-byebug (3.8.0)
+      byebug (~> 11.0)
+      pry (~> 0.10)
+    puma (6.3.0)
+      nio4r (~> 2.0)
+    rack (2.2.7)
+    rack-protection (2.1.0)
+      rack
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
+    racksh (1.0.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5)
+    rake (13.0.6)
+    redis (4.8.1)
+    redis-client (0.14.1)
+      connection_pool
+    ruby2_keywords (0.0.4)
+    sidekiq (7.1.2)
+      concurrent-ruby (< 2)
+      connection_pool (>= 2.3.0)
+      rack (>= 2.2.4)
+      redis-client (>= 0.14.0)
+    sinatra (2.1.0)
+      mustermann (~> 1.0)
+      rack (~> 2.2)
+      rack-protection (= 2.1.0)
+      tilt (~> 2.0)
+    sinatra-contrib (2.1.0)
+      multi_json
+      mustermann (~> 1.0)
+      rack-protection (= 2.1.0)
+      sinatra (= 2.1.0)
+      tilt (~> 2.0)
+    tilt (2.0.10)
+    zeitwerk (2.4.2)
+
+PLATFORMS
+  x86_64-darwin-20
+  x86_64-darwin-22
+  x86_64-linux
+
+DEPENDENCIES
+  comff
+  connection_pool
+  grande
+  multi_json
+  oj
+  pry
+  pry-byebug
+  puma
+  racksh
+  rake
+  redis
+  sidekiq (~> 7.1.2)
+  sidekiq-ent!
+  sidekiq-pro!
+  sinatra
+  sinatra-contrib
+  zeitwerk
+
+BUNDLED WITH
+   2.4.14

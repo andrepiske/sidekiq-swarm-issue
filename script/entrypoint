@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+ENV['RAILS_LOG_TO_STDOUT'] = '1'
+
+def parse_procfile
+  File.readlines('Procfile').map(&:strip).map do |line|
+    next if line[0] == '#' || line.strip == ''
+    line.split(':', 2).map(&:strip)
+  end.compact.to_h
+end
+
+def exec_with_shell(command)
+  exec(command)
+end
+
+puts "ARGVs: (#{ARGV.length})"
+ARGV.each do |v|
+  puts " - #{v}"
+end
+
+# This means someone is running with heroku run
+if (ARGV[0] == 'web' && ARGV.length > 1)
+  exec_with_shell(ARGV[1..].join(' '))
+elsif ARGV[0] =~ /bash/
+  exec_with_shell(ARGV.join(' '))
+else
+  proc_map = parse_procfile
+  command = proc_map[ARGV[0]]
+
+  exec_with_shell(command)
+end

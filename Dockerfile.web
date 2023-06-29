@@ -1,0 +1,2 @@
+FROM swarm-issue:latest
+CMD ["web"]
